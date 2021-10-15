@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script>
+    function getChecked() {
+        var idsToAdd = []
+        var tracks = document.getElementsByClassName("playlists");
+        for (var i = 0; i < tracks.length; i++) {
+            var track = tracks[i];
+            if (track.checked) {
+                idsToAdd.push(track.value)
+            }
+        }
+        document.getElementById("val").value = idsToAdd;
+    }
+    getChecked();
+</script>
+<style>
+    #playlist_cover {
+        width:200px;
+        height:200px;
+        object-fit:cover;
+    }
+</style>
+<center>
+    <br>
+    <form class="justify-content-center form-inline" method="POST" action="{{ url_for('playlists') }}" name="myform">
+        <div name="test" class="">
+            <h1>choose a playlist</h1>
+            {% for playlist in playlist_data %}
+                <img id="playlist_cover" src="{{ playlist['id'] | image }}">
+                <input type="checkbox" class="playlists" value="{{ playlist['id'] }}">{{playlist['name']}}</inputs>
+            {% endfor %}
+        </div>
+            <button type="submit" class="btn btn-outline-secondary" onclick="getChecked()">swift-ify</button>
+            <input style="display: none" id="val" name="listIds" value="">
+            <input style="display: none" name="playlistId" value="{{id}}">
+    </form>
+{% block playlist %} {% endblock %}
+{% endblock %}
