@@ -26,7 +26,7 @@
     <br>
     <form class="justify-content-center form-inline" method="POST" action="{{ url_for('playlists') }}" name="myform">
         <div name="test" class="">
-            <h1>choose a playlist</h1>
+            <h1>choose playlist(s)</h1>
             {% for playlist in playlist_data %}
                 <img id="playlist_cover" src="{{ playlist['id'] | image }}">
                 <input type="checkbox" class="playlists" value="{{ playlist['id'] }}">{{playlist['name']}}</inputs>
