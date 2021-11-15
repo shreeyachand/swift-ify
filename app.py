@@ -24,7 +24,7 @@ def get_auth():
     cache_handler = spotipy.cache_handler.CacheFileHandler(cache_path=session_cache_path())
     return cache_handler, spotipy.oauth2.SpotifyOAuth(client_id=environ.get("SPOTIPY_CLIENT_ID"),
     client_secret=environ.get("SPOTIPY_CLIENT_SECRET"),
-    redirect_uri=url_for("redirect_page", _external=True), scope='playlist-modify-public user-library-read', cache_handler=cache_handler, show_dialog=True)
+    redirect_uri=url_for("redirect_page", _external=True), scope='playlist-modify-public', cache_handler=cache_handler, show_dialog=True)
 
 @app.route('/')
 def index():
