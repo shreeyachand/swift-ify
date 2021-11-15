@@ -14,6 +14,27 @@
         document.getElementById("val").value = idsToAdd;
     }
     getChecked();
+    var allChecked = false;
+    function checkAll() {
+        btn = document.getElementById("checkAll")
+        var tracks = document.getElementsByClassName("playlists");
+        if (!allChecked) {
+            for (var i = 0; i < tracks.length; i++) {
+                var track = tracks[i];
+                track.checked = true;
+            }
+            allChecked = true;
+            btn.value = "uncheck all";
+        } else {
+            for (var i = 0; i < tracks.length; i++) {
+                var track = tracks[i];
+                track.checked = false;
+            }
+            allChecked = false;
+            btn.value = "check all";
+        }
+    }
+    txt.style.display = "none";
 </script>
 <style>
     #playlist_cover {
@@ -24,17 +45,19 @@
 </style>
 <center>
     <br>
+    <input class="btn btn-outline-success" type="button" value="check all" id="checkAll" onclick="checkAll()"/>
+    <br><br>
     <form class="justify-content-center form-inline" method="POST" action="{{ url_for('playlists') }}" name="myform">
+            <button type="submit" class="btn btn-outline-secondary btn-lg" onclick="getChecked()">SWIFT-IFY</button>
+            <input style="display: none" id="val" name="listIds" value="">
+            <input style="display: none" name="playlistId" value="{{id}}">
         <div name="test" class="">
             <h1>choose playlist(s)</h1>
             {% for playlist in playlist_data %}
                 <img id="playlist_cover" src="{{ playlist['id'] | image }}">
                 <input type="checkbox" class="playlists" value="{{ playlist['id'] }}">{{playlist['name']}}</inputs>
             {% endfor %}
-        </div>
-            <button type="submit" class="btn btn-outline-secondary" onclick="getChecked()">swift-ify</button>
-            <input style="display: none" id="val" name="listIds" value="">
-            <input style="display: none" name="playlistId" value="{{id}}">
+        </div> 
     </form>
 {% block playlist %} {% endblock %}
 {% endblock %}

@@ -43,6 +43,23 @@ taylors_version_equivalents = {
     '7MecVsMj22MneZt7kVFaCr': '7A2cNLRT0YJc1yjxHlKihs', # Starlight
     '0L4YCNRfXAoTvdpWeH2RGj': '05GsNucq8Bngd9fnd4fRa0', # Begin Again
     # Red Deluxe
+    '5zyCYmiaVE5y26EZuwZbsw': '6lzc0Al0zfZOIFsFvBS1ki', # State of Grace
+    '1RvQQGwaPipiNgz8RXAKA8': '4OAuvHryIVv4kMDNSLuPt6', # Red
+    '0XfOV7qY3834QpFVwOb6CC': '3S7HNKPakdwNEBFIVTL6dZ', # Treacherous
+    '0ciHz919LVKoH4zgxyMPZ9': '6AtZLIzUINvExIUy4QhdjP', # I Knew You Were Trouble
+    '1q3RiD1tIWUpGsNFADMlvl': '3nsfB1vus2qaloUdcBZvDu', # All Too Well
+    '3bIxTsfeNMO7Nt2J3EUKrA': '3yII7UwgLF6K5zW3xad3MP', # 22
+    '31pEV5lPJi7btskZoUr2yu': '2r9CbjYgFhtAmcFv1cSquB', # I Almost Do
+    '1OYARuagDrpgNNQ4loO1Cs': '5YqltLsjdqFtvqE7Nrysvs', # We Are Never Ever Getting Back Together
+    '1x0J8LFX23d5h1zzuzZorc': '7eQj6r5PIdYKEIZjucBMcq', # Stay Stay Stay
+    '7vvIpJZye5cRR6De1LKM0m': '0y6kdSRCVQhSsHSpWvTUm7', # The Last Time
+    '5d2Kn9oAAh9S2EbyCo1i52': '7J4b3LVCIGO4CMBDFLPoP6', # Holy Ground
+    '5QKhg4r4Ibt0LVTmWEXTEg': '73qMN9bXy7MSPwwGfH3wQr', # Sad Beautiful Tragic
+    '2wtHlpYSgC7xEdD3DrSHNL': '4e5ayHsOLJNLTGfjau2mEw', # The Lucky One
+    '7gdwoOmi258QJq0hmQ4hto': '7qEUFOVcxRI19tbT68JcYK', # Everything Has Changed
+    '0vqI4ZIMuifeKeItGiWbPj': '7A2cNLRT0YJc1yjxHlKihs', # Starlight
+    '48A0aShHlovDfTMucMrE66': '05GsNucq8Bngd9fnd4fRa0', # Begin Again
+
     '5AsmAjBSSQjRPWgAYIp8tm': '0NRHj8hDwwmSPaA41o379r', # The Moment I Knew
     '4qyalTRMRH5YuEntvvMvq0': '4pNApnaUWAL2J4KO2eqokq', # Come Back...Be Here
     '6cf6rLb8qcklvJv90W6HCW': '0DMVrlMUn01M0IcpDbwgu7', # Girl At Home

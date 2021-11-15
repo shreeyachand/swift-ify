@@ -80,8 +80,7 @@ def playlists():
     #   return render_template('playlist.html', playlist_data=results['items'], user_info=sp.current_user(), pfp=get_pfp(sp.current_user()), id=playlistid)
     if request.method == "POST":
         playlistids = request.form.get('listIds').split(',')[0]
-        tfy(playlistids)
-        return redirect('/success')
+        return tfy(playlistids)
     else:
         return render_template('dropdown.html', playlist_data=results['items'], user_info=sp.current_user(), pfp=get_pfp(sp.current_user()))
 
@@ -89,7 +88,8 @@ def tfy(args):
     cache_handler, auth_manager = get_auth()
     if not auth_manager.validate_token(cache_handler.get_cached_token()):
         return redirect('/')
-
+    if args=="":
+        return "you didn't select any playlists! try again."
     sp = spotipy.Spotify(auth_manager=auth_manager)
     chosenIds = args.split(',')
     for id in chosenIds:
@@ -97,6 +97,7 @@ def tfy(args):
             if (fetch_tv_id(song['track']['id'])) != -1:
                 sp.playlist_remove_specific_occurrences_of_items(id, [{"uri":song['track']['id'], "positions":[x]}])
                 sp.playlist_add_items(id, [fetch_tv_id(song['track']['id'])], position=x)
+    return redirect('/success')
         
 
 @app.route('/success')
